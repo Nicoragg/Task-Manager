@@ -11,10 +11,10 @@ Content-Type: application/json
 GET http://localhost:5028/api/usuario/listar
 
 ### Buscar Usuário por ID
-GET http://localhost:5028/api/usuario/buscar/4
+GET http://localhost:5028/api/usuario/buscar/2
 
 ### Alterar Usuário
-PUT http://localhost:5028/api/usuario/alterar/4
+PUT http://localhost:5028/api/usuario/alterar/2
 Content-Type: application/json
 
 {
@@ -23,7 +23,32 @@ Content-Type: application/json
 }
 
 ### Deletar Usuário
-DELETE http://localhost:5028/api/usuario/deletar/4
+DELETE http://localhost:5028/api/usuario/deletar/2
+
+### Criar Projeto
+POST http://localhost:5028/api/projeto/criar
+Content-Type: application/json
+
+{
+  "nome": "Cuidar dos gatos"
+}
+
+### Listar Projetos
+GET http://localhost:5028/api/projeto/listar
+
+### Buscar Projeto por ID
+GET http://localhost:5028/api/projeto/buscar/5
+
+### Alterar Projeto
+PUT http://localhost:5028/api/projeto/alterar/5
+Content-Type: application/json
+
+{
+  "nome": "Projeto 1 Alterado"
+}
+
+### Deletar Projeto
+DELETE http://localhost:5028/api/projeto/deletar/2
 
 
 ### Criar Tarefa
@@ -35,7 +60,7 @@ Content-Type: application/json
   "descricao": "Estudar programacao - js",
   "prazo": "2024-05-19T01:59:59",
   "prioridade": "Media",
-  "projetoId":  5
+  "projetoId":  1
 }
 
 ### Listar Tarefas
@@ -53,7 +78,7 @@ Content-Type: application/json
   "descricao": "Descrição da Tarefa 1 Alterada",
   "prazo": "2024-06-30T23:59:59",
   "prioridade": "Media",
-  "projetoId": 5
+  "projetoId": 1
 }
 
 ### Deletar Tarefa
@@ -67,3 +92,17 @@ GET http://localhost:5028/api/tarefa/listarporprioridade/Media
 
 ### Listar Tarefas por Prioridade (Alta)
 GET http://localhost:5028/api/tarefa/listarporprioridade/Alta
+
+
+### Atribuir Usuário a Tarefa
+POST http://localhost:5028/api/tarefa/5/atribuir/2
+
+### Remover Usuário de Tarefa
+DELETE http://localhost:5028/api/tarefa/5/remover/2
+
+### Listar Tarefas por Projeto
+GET http://localhost:5028/api/projeto/5/tarefas/
+
+### Notificacao
+GET http://localhost:5028/api/notificacao/listar/
+
