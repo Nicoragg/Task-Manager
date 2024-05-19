@@ -1,0 +1,69 @@
+### Criar Usuário
+POST http://localhost:5028/api/usuario/criar
+Content-Type: application/json
+
+{
+  "nome": "Vivien Christine",
+  "email": "Vchristine@example.com"
+}
+
+### Listar Usuários
+GET http://localhost:5028/api/usuario/listar
+
+### Buscar Usuário por ID
+GET http://localhost:5028/api/usuario/buscar/4
+
+### Alterar Usuário
+PUT http://localhost:5028/api/usuario/alterar/4
+Content-Type: application/json
+
+{
+  "nome": "João Alterado",
+  "email": "joao.alterado@example.com"
+}
+
+### Deletar Usuário
+DELETE http://localhost:5028/api/usuario/deletar/4
+
+
+### Criar Tarefa
+POST http://localhost:5028/api/tarefa/criar
+Content-Type: application/json
+
+{
+  "titulo": "Tarefa da vivi",
+  "descricao": "Estudar programacao - js",
+  "prazo": "2024-05-19T01:59:59",
+  "prioridade": "Media",
+  "projetoId":  5
+}
+
+### Listar Tarefas
+GET http://localhost:5028/api/tarefa/listar
+
+### Buscar Tarefa por ID
+GET http://localhost:5028/api/tarefa/buscar/2
+
+### Alterar Tarefa
+PUT http://localhost:5028/api/tarefa/alterar/2
+Content-Type: application/json
+
+{
+  "titulo": "Tarefa 1 Alterada",
+  "descricao": "Descrição da Tarefa 1 Alterada",
+  "prazo": "2024-06-30T23:59:59",
+  "prioridade": "Media",
+  "projetoId": 5
+}
+
+### Deletar Tarefa
+DELETE http://localhost:5028/api/tarefa/deletar/1
+
+### Listar Tarefas por Prioridade (Baixa)
+GET http://localhost:5028/api/tarefa/listarporprioridade/Baixa
+
+### Listar Tarefas por Prioridade (Media)
+GET http://localhost:5028/api/tarefa/listarporprioridade/Media
+
+### Listar Tarefas por Prioridade (Alta)
+GET http://localhost:5028/api/tarefa/listarporprioridade/Alta
